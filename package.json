@@ -9,6 +9,7 @@
     "migrations-prod": "clear && env-cmd -f ./.env ts-node-dev ./src/migrations.ts",
     "dropTable-prod": "clear && env-cmd -f ./.env ts-node-dev ./src/dropTable.ts",
     "start": "clear && env-cmd -f ./.env ts-node ./src/index.ts",
+    "start-heroku": "node ./build/index.js",
     "build": "tsc",
     "dev": "clear && env-cmd -f ./.env.development ts-node-dev ./src/index.ts"
   },
