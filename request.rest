@@ -1,0 +1,73 @@
+###
+GET http://localhost:4444/usuario
+
+###
+POST http://localhost:4444/usuario
+Content-Type: application/json
+
+{
+    "email": "teste3@teste.com",
+    "password": "1234567A",
+    "nome": "teste" 
+}
+
+###
+GET http://localhost:4444/papel
+
+###
+POST http://localhost:4444/papel
+Content-Type: application/json
+
+{
+    "nome": "teste", 
+    "papel": "MXRF11", 
+    "tipoDeRenda": "fixa", 
+    "tipoDeInvestimento": "", 
+    "taxasIncidentes": ""
+}
+
+###
+PUT http://localhost:4444/papel/f7a7d9af-f29f-4446-8b75-fe1f10206328
+Content-Type: application/json
+
+{
+    "nome": "teste", 
+    "papel": "MXRF11", 
+    "tipoDeRenda": "fixa", 
+    "tipoDeInvestimento": "", 
+    "taxasIncidentes": ""
+}
+
+###
+GET http://localhost:4444/movimentacao
+
+###
+POST http://localhost:4444/movimentacao
+Content-Type: application/json
+
+{
+    "userId": "5d083def-c54f-4d3f-bf81-7568959b3bb3",
+    "papel": "MXRF12", 
+    "dataDaCompra": "2020-10-10", 
+    "preco": 10, 
+    "qtd": 5,
+    "corretora": "modal",
+    "tipoMovimentacao": "venda"
+}
+
+###
+GET http://localhost:4444/tipo-de-renda
+
+###
+GET http://localhost:4444/tipo-de-investimento
+
+###
+GET http://localhost:4444/corretora
+
+###
+POST http://localhost:4444/corretora
+Content-Type: application/json
+
+{
+    "nome": "Modal"
+}
