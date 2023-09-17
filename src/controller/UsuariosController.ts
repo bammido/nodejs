@@ -61,11 +61,16 @@ class UsuarioController {
         try {
             const { email, password } = req.body
 
-            const usuario = await usuarioDatabase.findOne({ email, password })
+            const usuario = await usuarioDatabase.findOne({ email })
 
             if (!usuario) {
                 statusError = 404
                 throw new Error("usuário não encontrado");
+            }
+
+            if (usuario.password !== password) {
+                statusError = 401
+                throw new Error("senha incorreta");
             }
 
             const token = await generateToken(usuario, '1h')

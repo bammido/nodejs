@@ -37,7 +37,7 @@ class MovimentacaoController {
 
             const papelJaCadastrado = await papelDatabase.findOne({ papel })
 
-            if (!papel || !data || !corretora || !preco || !qtd || !userId || !tipoMovimentacao) {
+            if (!papel || !data || !corretora || (!preco && preco !== 0) || !qtd || !userId || !tipoMovimentacao) {
                 statusError = 422
                 throw new Error('Os campos papel, dataDaCompra, corretora, preco, qtd, userId e tipoMovimentacao são obrigatórios')
             }

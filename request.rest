@@ -69,5 +69,5 @@ POST http://localhost:4444/corretora
 Content-Type: application/json
 
 {
-    "nome": "Modal"
+    "nome": "PagBank"
 }
